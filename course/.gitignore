@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.pyc
+logs/
+# hw0/logs/ must exist in a fresh clone: Slurm opens train.sbatch's
+# --output file itself and will fail the job rather than create the
+# directory. Track the directory, ignore everything that lands in it.
+!hw0/logs/
+hw0/logs/**
+!hw0/logs/.gitkeep
+runs/
+wandb/
+outputs/
+*.pt
+.DS_Store
+
+# Generated at runtime by MuJoCo / tooling.
+MUJOCO_LOG.TXT
+.ruff_cache/
+
+# Staff working notes: references the private course-solutions repo.
+# Must never enter student-visible history.
+CLAUDE.md
