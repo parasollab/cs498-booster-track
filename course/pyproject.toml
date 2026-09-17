@@ -5,6 +5,7 @@ description = "Course environments and infrastructure for RL on DeltaAI (mjlab /
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "ipykernel>=7.3.0",
     "mjlab",
     "torch",
 ]
@@ -31,8 +32,9 @@ course_tasks = "course_tasks"
 #     is the API students get. Bump the rev intentionally, per-semester.
 #   * torch comes from PyPI's default resolution: on DeltaAI (aarch64 /
 #     Grace Hopper) a plain `uv sync` was verified to resolve an
-#     aarch64+CUDA build (torch 2.13.0+cu130). Do NOT copy the x86-only
-#     pytorch-cu128 index from mjlab_playground here; it would break aarch64.
+#     aarch64+CUDA build (torch 2.14.0+cu130, the version uv.lock pins). Do
+#     NOT copy the x86-only pytorch-cu128 index from mjlab_playground here;
+#     it would break aarch64.
 #     After the first successful sync ON DELTAAI, commit uv.lock so every
 #     student resolves the identical environment.
 # ---------------------------------------------------------------------------

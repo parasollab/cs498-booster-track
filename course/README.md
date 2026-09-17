@@ -100,7 +100,8 @@ affect your own jobs.
 ```
 docs/
   00_deltaai_setup.md      Part A: get cluster access · Part B: install this repo
-  01_workflow.md           login node / salloc / sbatch, storage, viser tunnel
+  01_workflow.md           login node / salloc / sbatch, viser tunnel, notebooks
+  02_custom_algorithms.md  how an algorithm plugs into train/play (from HW2)
 scripts/
   check_login_env.py       sanity checks for the login node (no GPU)
   check_gpu_env.py         sanity checks to run inside salloc / sbatch
@@ -109,5 +110,10 @@ scripts/
   cluster.env              course account / partition / storage settings
 src/course_tasks/          the Python package with all course environments
   hw0/                     cartpole walkthrough + double pendulum starter
+  hw2/                     double pendulum envs, REINFORCE + your PPO
 hw0/README.md              assignment 0 handout
+hw2/README.md              assignment 2 handout
+hw2/reinforce_walkthrough.ipynb   REINFORCE walkthrough notebook (HW2 Part I)
+hw2/plot_comparison.py     plots your runs against environment steps
+logs/                      all training output lands here (git-ignored)
 ```

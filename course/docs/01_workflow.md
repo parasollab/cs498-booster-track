@@ -54,7 +54,8 @@ dies by design.
 ## Step 3 — `sbatch`: real training runs
 
 All training goes through the course template, which bakes in the account,
-partition, a GPU cap, a wall-time cap, and output paths on `/work`:
+partition, a GPU cap, a wall-time cap, and the output paths. Those paths are
+**inside the repo**, under `logs/` — not on `/work`:
 
 ```bash
 sbatch scripts/train.sbatch Course-Cartpole-Swingup --env.scene.num-envs 4096
@@ -65,19 +66,40 @@ Monitor with:
 
 ```bash
 squeue --me                      # is it queued/running?
-tail -f hw0/logs/slurm-<jobid>.out
+tail -f logs/slurm-<jobid>.out
 ```
 
-Checkpoints and logs land inside the repo, under `hw0/logs/rsl_rl/`.
-See "Where your output lands" in `hw0/README.md` for the full layout.
+Checkpoints and logs land inside the repo, under `logs/rsl_rl/` —
+see "Where your output lands" in `hw0/README.md` for the full layout.
 Metrics go to W&B, so run `uv run wandb login` on the login node before
 your first `sbatch`. View a trained policy afterwards on the login node, not compute node.
 
 ```bash
-uv run play Course-Cartpole-Swingup --checkpoint-file <path/to/model_xxx.pt> --log-root hw0/logs/rsl_rl
+uv run play Course-Cartpole-Swingup --checkpoint-file <path/to/model_xxx.pt> --log-root logs/rsl_rl
 # or, if the run logged to W&B:
 uv run play Course-Cartpole-Swingup --wandb-run-path <org>/<project>/<run-id>
 ```
+
+## Notebooks: VS Code on the login node (no GPU)
+
+From HW2 on, some material comes as Jupyter notebooks, starting with
+`hw2/reinforce_walkthrough.ipynb`. Run them in VS Code connected to the login
+node. The notebook's kernel is the repo's own `.venv`, so it sees exactly the
+environment `uv run` does.
+
+1. On your laptop, install VS Code and its **Remote - SSH** and **Jupyter**
+   extensions.
+2. Command Palette → **Remote-SSH: Connect to Host…** → `deltaai` (the `Host`
+   block from `docs/00_deltaai_setup.md`), then open your repo folder.
+3. In VS Code's terminal, run `uv sync` once after pulling. The notebook kernel
+   (`ipykernel`) is a course dependency as of HW2.
+4. Open the notebook, click **Select Kernel** → **Python Environments**, and
+   pick the repo's `.venv/bin/python`.
+
+This runs on the login node's CPU and costs zero GPU-hours. Login nodes are
+shared: keep `num_envs` as small as the notebook sets it, and shut the kernel
+down when you finish (close the notebook tab and choose to shut the kernel
+down, or **Restart** → close).
 
 ## Budget
 

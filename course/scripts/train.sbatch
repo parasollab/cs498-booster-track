@@ -5,15 +5,20 @@
 #   e.g. sbatch scripts/train.sbatch Course-Cartpole-Swingup --env.scene.num-envs 4096
 #
 # Submit from the REPO ROOT. Everything this job produces stays inside the
-# repo, under hw0/logs/:
-#   hw0/logs/slurm-<jobid>.out                        this job's stdout/stderr
-#   hw0/logs/rsl_rl/<experiment>/<run>/model_<n>.pt   checkpoints
-#   hw0/logs/rsl_rl/<experiment>/<run>/params/        resolved env + agent cfg
-# <experiment> comes from the task's PPO runner cfg: "hw0_cartpole" for
-# Course-Cartpole-*, "cartpole_double" for Course-Cartpole-Double-*.
+# repo, under logs/:
+#   logs/slurm-<jobid>.out                        this job's stdout/stderr
+#   logs/rsl_rl/<experiment>/<run>/model_<n>.pt   checkpoints
+#   logs/rsl_rl/<experiment>/<run>/params/        resolved env + agent cfg
+# <experiment> comes from the task's runner cfg, and is what keeps assignments
+# apart in one shared log root: "hw0_cartpole" for Course-Cartpole-*,
+# "cartpole_double" for Course-Cartpole-Double-*, "hw2_reinforce" and
+# "hw2_reinforce_cartpole" for Course-HW2-*.
+#
+# CHANGED IN HW2: this used to be hw0/logs/. One log root now serves every
+# assignment. Runs you made before the change are still where you left them.
 #
 # The --output path below is relative to the directory you submit from and
-# Slurm will NOT create it, which is why hw0/logs/ is committed to the repo.
+# Slurm will NOT create it, which is why logs/ is committed to the repo.
 #
 # Resource limits are fixed on purpose. Do not add your own #SBATCH lines.
 #
@@ -25,7 +30,7 @@
 #SBATCH --time=04:00:00
 #SBATCH --account=bign-dtai-gh
 #SBATCH --partition=ghx4
-#SBATCH --output=hw0/logs/slurm-%j.out
+#SBATCH --output=logs/slurm-%j.out
 
 set -euo pipefail
 cd "${SLURM_SUBMIT_DIR}"
@@ -38,7 +43,7 @@ if [[ ! -f scripts/train.sbatch ]]; then
   exit 1
 fi
 
-LOG_DIR="${SLURM_SUBMIT_DIR}/hw0/logs"
+LOG_DIR="${SLURM_SUBMIT_DIR}/logs"
 LOG_ROOT="${LOG_DIR}/rsl_rl"
 mkdir -p "${LOG_ROOT}"
 

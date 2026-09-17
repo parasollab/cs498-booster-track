@@ -167,17 +167,23 @@ known-good task:
 ```bash
 sbatch scripts/train.sbatch Course-Cartpole-Swingup --env.scene.num-envs 4096
 squeue --me
-tail -f hw0/logs/slurm-<jobid>.out
+tail -f logs/slurm-<jobid>.out
 ```
 
 ### Where your output lands
 
 Everything a training job produces stays **inside this repo**, under
-`hw0/logs/`. Always submit with `sbatch` from the repo root — the paths
+`logs/`. Always submit with `sbatch` from the repo root — the paths
 below are relative to it.
 
+> **Changed in HW2.** This used to be `hw0/logs/`. There is now one log root,
+> `logs/`, shared by every assignment; runs stay separated by the
+> `<experiment>` directory below. If you trained before this change, those runs
+> are still in `hw0/logs/` and nothing moved them — the commands here just point
+> at the new location from now on.
+
 ```
-hw0/logs/
+logs/
 ├── slurm-<jobid>.out                    job stdout/stderr (training curve prints here)
 ├── wandb/                               W&B's local run cache
 └── rsl_rl/
@@ -205,16 +211,18 @@ because `$HOME` is shared, your compute job picks it up automatically:
 uv run wandb login      # paste the key from https://wandb.ai/authorize
 ```
 
-DO NOT SKIP THIS
+Skip this and the job has no credential to use, which costs you the GPU-hours
+the run burns before you notice. Checkpoints are unaffected — they are always
+written to `logs/rsl_rl/` regardless of what W&B does.
 
 Two things:
 
-* **Checkpoints are git-ignored** (`*.pt` and everything under `hw0/logs/`
+* **Checkpoints are git-ignored** (`*.pt` and everything under `logs/`
   except the directory itself).
 * Find your most recent run without typing a timestamp:
 
   ```bash
-  ls -t hw0/logs/rsl_rl/cartpole_double/*/model_*.pt | head -1
+  ls -t logs/rsl_rl/cartpole_double/*/model_*.pt | head -1
   ```
 
 Cartpole swingup should visibly learn within the run. If it doesn't, your
@@ -244,8 +252,8 @@ When a run has saved checkpoints you can play it back with:
 
 ```bash
 uv run play Course-Cartpole-Double-Swingup \
-  --checkpoint-file hw0/logs/rsl_rl/cartpole_double/<run>/model_<iter>.pt \
-  --log-root hw0/logs/rsl_rl
+  --checkpoint-file logs/rsl_rl/cartpole_double/<run>/model_<iter>.pt \
+  --log-root logs/rsl_rl
 ```
 
 Expect to iterate: watch → adjust your reward → retrain. Balancing one link

@@ -43,12 +43,15 @@ After that, `ssh deltaai` both logs you in and forwards the viewer port.
 | `/work/hdd/<acct>/` | large datasets, shared data      | — |
 | `/work/nvme/...`    | fast scratch                     | anything you can't afford to lose |
 
-**HW0 is a deliberate exception to the usual "outputs go on `/work`" advice.**
-Cartpole checkpoints are small, so `scripts/train.sbatch` writes everything
-into the repo under `hw0/logs/`. Later assignments with bigger artifacts will
-say so explicitly.
+**The cartpole assignments are a deliberate exception to the usual "outputs go
+on `/work`" advice.** Their checkpoints are small, so `scripts/train.sbatch`
+writes everything into the repo under `logs/` — one directory to look in, and
+the same paths whether you're on a login node or a compute node. All
+assignments share that one log root; runs are kept apart by experiment name.
+There is no work directory to create for HW0 or HW2. Later assignments with
+bigger artifacts will say so explicitly.
 
-Keep an eye on your quota anyway (`quota` or `du -sh hw0/logs`), and delete
+Keep an eye on your quota anyway (`quota` or `du -sh logs`), and delete
 runs you no longer need — checkpoints accumulate faster than you'd think.
 
 ---
@@ -85,7 +88,7 @@ uv sync
 
 This reads `pyproject.toml` + `uv.lock` and builds the exact environment
 the course and autograder use — including the correct **aarch64 + CUDA**
-PyTorch build (verified on DeltaAI: torch 2.13.0+cu130). The first sync
+PyTorch build (verified on DeltaAI: torch 2.14.0+cu130). The first sync
 downloads a few GB; subsequent ones are fast.
 
 Rules that keep everyone's environment identical:
