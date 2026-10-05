@@ -1,0 +1,1502 @@
+{
+  "upstream_url": "https://github.com/IntelligentRoboticsLab/booster_mjlab.git",
+  "commit": "d92e11395d961096d639446c0a8a176f12bb51da",
+  "original_file_count": 193,
+  "original_bytes": 42446543,
+  "retained_file_count": 63,
+  "retained_bytes": 12532241,
+  "files": {
+    ".github/workflows/docs.yml": {
+      "original_sha256": "e4cfa090b94c9d491cc64d38232d473fda9f4bbb2c71e6ca3064c230264e9d4d",
+      "original_bytes": 765,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    ".gitignore": {
+      "original_sha256": "25e93811bafcf5acf3e7814ef3e1ee57555b88c23e6ea6bd5ee31f4608170eb3",
+      "original_bytes": 260,
+      "classification": "REQUIRED_INSTALL_BUILD",
+      "retained": true,
+      "evidence": "Pinned uv project/build/lock/Python or source-ignore metadata.",
+      "current_sha256": "25e93811bafcf5acf3e7814ef3e1ee57555b88c23e6ea6bd5ee31f4608170eb3",
+      "current_bytes": 260
+    },
+    ".python-version": {
+      "original_sha256": "02e735b3dfe1c32833eb550b7ff8ffa17f5f2bc3fa1e7bae61a8f5a3883ce398",
+      "original_bytes": 5,
+      "classification": "REQUIRED_INSTALL_BUILD",
+      "retained": true,
+      "evidence": "Pinned uv project/build/lock/Python or source-ignore metadata.",
+      "current_sha256": "02e735b3dfe1c32833eb550b7ff8ffa17f5f2bc3fa1e7bae61a8f5a3883ce398",
+      "current_bytes": 5
+    },
+    "README.md": {
+      "original_sha256": "de2bc72342fa5cce26146bfc99c79c78d465fe0bc55ad4b24dc70a3a30f56f67",
+      "original_bytes": 4451,
+      "classification": "REQUIRED_PROVENANCE",
+      "retained": true,
+      "evidence": "Original attribution or third-party license, preserved verbatim; not a Booster software license.",
+      "current_sha256": "de2bc72342fa5cce26146bfc99c79c78d465fe0bc55ad4b24dc70a3a30f56f67",
+      "current_bytes": 4451
+    },
+    "assets/banner.webp": {
+      "original_sha256": "7f8d1b84aa15ba6518d64f77698c67dbb3a8acbeea6f9033ae1ab8b2b4da46de",
+      "original_bytes": 5443556,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "assets/motion_grid_dark.webp": {
+      "original_sha256": "e8f0d0ed7acc828a2f11e892646de394fea979e3adc8c8573452ba51740f8380",
+      "original_bytes": 5000848,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "assets/motion_grid_light.webp": {
+      "original_sha256": "6c9a635a9163504683193af9116096b909ed1462816d66b2ca0eafb12b854592",
+      "original_bytes": 5133994,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "assets/whirlwind_logo_dark.png": {
+      "original_sha256": "412bfb8793fdc6d15c180e801cf948377d89defe1cd214c80bbd03ec5132a6d7",
+      "original_bytes": 56423,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "assets/whirlwind_logo_light.png": {
+      "original_sha256": "6a173f76973006d7e18f72a31009aea716e823f28770c63f28e572ba33a94548",
+      "original_bytes": 54070,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "docs/motion_preparation.md": {
+      "original_sha256": "668cb8f327780530574ecf98940cc16ab17ac64161cdb4e2b7f3f16b0dc868c7",
+      "original_bytes": 1626,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "pyproject.toml": {
+      "original_sha256": "6cc9d592135b2ee4de315b764d2affd61f1c03f4db3326656e3e1f46b4483bd9",
+      "original_bytes": 1108,
+      "classification": "REQUIRED_INSTALL_BUILD",
+      "retained": true,
+      "evidence": "Pinned uv project/build/lock/Python or source-ignore metadata.",
+      "current_sha256": "dc31d837b3894cedfd2605d8b6dc494388427a10076ec71f1159c417bca606c8",
+      "current_bytes": 785,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/__init__.py": {
+      "original_sha256": "86c3059e45de8b1ff5b101897bb775e3c5f466d71b9f2bb377fa710a7a3357b1",
+      "original_bytes": 165,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "86c3059e45de8b1ff5b101897bb775e3c5f466d71b9f2bb377fa710a7a3357b1",
+      "current_bytes": 165
+    },
+    "src/booster_mjlab/amp/__init__.py": {
+      "original_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "original_bytes": 1,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/algorithms/__init__.py": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/algorithms/amp_ppo.py": {
+      "original_sha256": "57a3ef435ccd4852cd14acecf52a46c9616ace79bc39c4a724941793f9924442",
+      "original_bytes": 19471,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/config.py": {
+      "original_sha256": "948ad8451c6cf4b1d5169d9896b6148d1b67bea9299f7cfa4b8b71051e34f7c8",
+      "original_bytes": 1210,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/curriculums.py": {
+      "original_sha256": "92d9bd101af96d2c8deb5227852076ad4237915c66a6e90a9e76abf22ed2394e",
+      "original_bytes": 1388,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/modules/__init__.py": {
+      "original_sha256": "3ea50121efaea723de0b32780ecc67e00f6022e6305330289a95832dcec89662",
+      "original_bytes": 185,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/modules/amp.py": {
+      "original_sha256": "dbe000e4305397b9e3438b910267784144e186b4e6fc6dbce2e8bc58484d50e9",
+      "original_bytes": 17530,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/modules/discriminator.py": {
+      "original_sha256": "a2560cfd7c4cafc5ac72bf243123ec786aa7ddb15f04b3610e1357cac2ba7682",
+      "original_bytes": 7802,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/modules/losses.py": {
+      "original_sha256": "9ab19717220f8d78107d3f643cf316804d94bc576c7c2658e20fc7779f0b8887",
+      "original_bytes": 5540,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/runners/__init__.py": {
+      "original_sha256": "416a1494bdb92fe8b2c3f0aebcb1bbff26ce4da66cf36e5d5eccf758d6142b70",
+      "original_bytes": 336,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/runners/amp_on_policy_runner.py": {
+      "original_sha256": "3b2b3b6fd764c15f197e0e4d688535c6156711e072b4c7efeb23a248b4b0bf7b",
+      "original_bytes": 8415,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/runners/amp_support.py": {
+      "original_sha256": "c877f6257e4b78f4597e526e10dfc3aca35f07831a179d20eacae8cbf7156470",
+      "original_bytes": 5243,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/utils/__init__.py": {
+      "original_sha256": "f74935d26f1bd2fb9768dc487112df244c78fa4cc709e21e357b5595f2fd4113",
+      "original_bytes": 80,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/utils/default_joint_positions.py": {
+      "original_sha256": "bb6a01d86182c117be2ab7a00f17b59bd3e5cdec8abc38c01fdb46a554e8067d",
+      "original_bytes": 1646,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/amp/utils/normalizer.py": {
+      "original_sha256": "e4ca97b09e775a3d6f517a8841fcdf539ffef0379bb1f0be059548eeb3d34490",
+      "original_bytes": 1648,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/environment/__init__.py": {
+      "original_sha256": "9dca77d068d4afcdeba513d6a92d5c673487fc306ac1374d75ed36b0fab761ac",
+      "original_bytes": 945,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/environment/ball/__init__.py": {
+      "original_sha256": "7c05d4d29b3c07a3435225878a2a602fc3f573e5c97d329f307c4bba9384e675",
+      "original_bytes": 38,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/environment/ball/ball_constants.py": {
+      "original_sha256": "ab21e9eaa1b1bad9edb5c2881f3bdf5dbbeb39392711dacbbcca13b6facf3c31",
+      "original_bytes": 6858,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/environment/ball/xmls/assets/ball_size5_0.obj": {
+      "original_sha256": "da8d54f01967ecba4a577f2706b54e01b49937a598d9a5e49718133b86541dd3",
+      "original_bytes": 169374,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Resource only referenced by removed parallel/sports environment; no retained XML or dynamic runtime references."
+    },
+    "src/booster_mjlab/environment/ball/xmls/assets/ball_size5_1.obj": {
+      "original_sha256": "06f60d0e23fa61fd51146233e2e1f31796b11ef65f32eb46f93980295d25ef93",
+      "original_bytes": 56546,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Resource only referenced by removed parallel/sports environment; no retained XML or dynamic runtime references."
+    },
+    "src/booster_mjlab/environment/ball/xmls/ball.xml": {
+      "original_sha256": "53821d7e05f64172a13ea1e639cbabf12893c3d05d9a447adaf693e6b448072a",
+      "original_bytes": 1373,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Resource only referenced by removed parallel/sports environment; no retained XML or dynamic runtime references."
+    },
+    "src/booster_mjlab/environment/goal/__init__.py": {
+      "original_sha256": "7850af55c2042276b41b7ef31dd29a02276d66f8002985133da67efa5e75dc7b",
+      "original_bytes": 38,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/environment/goal/goal_constants.py": {
+      "original_sha256": "02f82dc4d83a4c79cd6467ccac59fda9db0767a1364ffc2eae9cc0a3fd92beaa",
+      "original_bytes": 2975,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/environment/goal/xmls/assets/goal_180_120.mtl": {
+      "original_sha256": "cc83669ee506ac35128467fdb6c7aebd4b4dc6ca45de1c2652a695c8b6e94578",
+      "original_bytes": 227,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Resource only referenced by removed parallel/sports environment; no retained XML or dynamic runtime references."
+    },
+    "src/booster_mjlab/environment/goal/xmls/assets/goal_180_120.obj": {
+      "original_sha256": "31da7ca46c96ee88bce38a619e6442ff6100f0deb9756f52bae862a6d1ab7727",
+      "original_bytes": 283954,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Resource only referenced by removed parallel/sports environment; no retained XML or dynamic runtime references."
+    },
+    "src/booster_mjlab/environment/goal/xmls/goal.xml": {
+      "original_sha256": "0f987324d5a7c6372a87fb4a06255e1533b7421c49bb805a0c5343fd0ed13a4f",
+      "original_bytes": 2763,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Resource only referenced by removed parallel/sports environment; no retained XML or dynamic runtime references."
+    },
+    "src/booster_mjlab/mdp/__init__.py": {
+      "original_sha256": "02c9f7220fda9aa4749d26c2ba5d5aca17f64e115463ae481a5067ce39c47b9a",
+      "original_bytes": 67,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "1cd55ff732828f41c7a8f5e174faf7348dc07ded9317ffc047e1f579b0e9c091",
+      "current_bytes": 68,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/mdp/events.py": {
+      "original_sha256": "9472a6728872f284138d64772a61f92e58d4c9761d5de135018582fd77a45b59",
+      "original_bytes": 13826,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/mdp/observations.py": {
+      "original_sha256": "4775266b288c1ee553f194e9de89da36b8102d3358753951b931bf874996f444",
+      "original_bytes": 2553,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/mdp/terminations.py": {
+      "original_sha256": "24dbe38836cfa6b1e41cb207bb466cd1102f53482e56559f64e3e83ef7e3b9ce",
+      "original_bytes": 1256,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "24dbe38836cfa6b1e41cb207bb466cd1102f53482e56559f64e3e83ef7e3b9ce",
+      "current_bytes": 1256
+    },
+    "src/booster_mjlab/mdp/terrain.py": {
+      "original_sha256": "ea3d9f6c22f86f61a8e9b748301590ec732461a8c0e2dbd5d431e750d5d084a7",
+      "original_bytes": 1537,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "ea3d9f6c22f86f61a8e9b748301590ec732461a8c0e2dbd5d431e750d5d084a7",
+      "current_bytes": 1537
+    },
+    "src/booster_mjlab/motion/__init__.py": {
+      "original_sha256": "a6b73bcfbcf936ecd9f4b40c9a11f15faeb4375a8e6507f859bff290695699b8",
+      "original_bytes": 1674,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/motion/hf_motion_dataset.py": {
+      "original_sha256": "88f3152b7b2ddbf8a6e78f7559e57c294c77e4d22edc8d19f38cd4df860aed6f",
+      "original_bytes": 4763,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/motion/motion_augmentations.py": {
+      "original_sha256": "2c2baf2af79c06e0b35e074633f2c160b313ea07c95a9565d822cb8c14fa4b07",
+      "original_bytes": 9914,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/motion/motion_data.py": {
+      "original_sha256": "56a25026f1bdfcc0bd0ccf51fe744c5acc80dcce4a2c76eccfd0048e9d4a605e",
+      "original_bytes": 15787,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/motion/motion_loader.py": {
+      "original_sha256": "bcd25d7016d5154990daa080d555a3dde5ed259bc5d34d5dc553ee708065a362",
+      "original_bytes": 13527,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/motion/resampling.py": {
+      "original_sha256": "0c6353a7818677b4d08bc9e0e896eb4583f1a3c2a1e4a905b807b636c4948785",
+      "original_bytes": 2824,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/rl/__init__.py": {
+      "original_sha256": "6f59554b730159459cc88d23a6f9ca62aef72a19be6b7157f494f5f9ca2f9651",
+      "original_bytes": 558,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "57e1fa3f1698f2518131cd690169e39aff708b5854cad81d322ea2f2af992d46",
+      "current_bytes": 312,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/rl/config.py": {
+      "original_sha256": "5e47c582ed65970db69b7d24d962cd6a01a724c49344b311bc4e7785c6aeeaf2",
+      "original_bytes": 7543,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "0f05eca165de3e1015cf68408deb07f144e197b791126ef0d6025c93d02e3848",
+      "current_bytes": 2353,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/rl/exporter_utils.py": {
+      "original_sha256": "89861b3b0e446223fe213690d8315c610c51341188e76a3b4f3bc1243d462887",
+      "original_bytes": 4699,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "89861b3b0e446223fe213690d8315c610c51341188e76a3b4f3bc1243d462887",
+      "current_bytes": 4699,
+      "keep_uncertain": "Co-located unused definitions retained intact: rough terrain factory, extra symmetry/pose/passive-export support. Removing fragments would require invasive surgery."
+    },
+    "src/booster_mjlab/rl/fast_sac/__init__.py": {
+      "original_sha256": "1aa1a04ec3d14a3a1fbc50b148756bb318af703c2a3e7595a8c7cfaf3d2e4277",
+      "original_bytes": 392,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/rl/fast_sac/fast_sac.py": {
+      "original_sha256": "67b8a8c6e96cea2b83a468e6d70de9b679f4912755f08694d5b92008f8efbab0",
+      "original_bytes": 34467,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/rl/fast_sac/networks.py": {
+      "original_sha256": "7afab5e82f0ff84838f5b273755e963302a0e4f40856106c8825bfc3604d3c0b",
+      "original_bytes": 10075,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/rl/fast_sac/replay_buffer.py": {
+      "original_sha256": "acc24236c1101b5a677ef72fba1686c6538381bc0e7b4a8abbcf889bbb734453",
+      "original_bytes": 8994,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/rl/fast_sac/runner.py": {
+      "original_sha256": "d466c28687a370874c56f99478918e25f3ce0cde54e53c159d6f6db56c358aa5",
+      "original_bytes": 6336,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/rl/muon.py": {
+      "original_sha256": "07865862d91945de2ea32f39f399e3234095209898027504d52ac953fef6a87e",
+      "original_bytes": 3121,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/rl/runner.py": {
+      "original_sha256": "b932498bf6acc57e01b8d25b4212e0b2e9c279a0c38bfedf46a351257e589dc6",
+      "original_bytes": 1235,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "b932498bf6acc57e01b8d25b4212e0b2e9c279a0c38bfedf46a351257e589dc6",
+      "current_bytes": 1235
+    },
+    "src/booster_mjlab/robots/__init__.py": {
+      "original_sha256": "1d650962d6a61b8a5a1fc32d31efda13125601d601ba6ae60b1d59910e03f1e2",
+      "original_bytes": 362,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "dd4f9659dac98f90fd9d60632c38332bbb136e4821428c7eb48ad0719a021a2d",
+      "current_bytes": 142,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/robots/booster_k1/__init__.py": {
+      "original_sha256": "5be3c8b4cb34e9b94538d0d5e05f16d55a0fca187295a4a491324f67fc1d7785",
+      "original_bytes": 27,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "5be3c8b4cb34e9b94538d0d5e05f16d55a0fca187295a4a491324f67fc1d7785",
+      "current_bytes": 27
+    },
+    "src/booster_mjlab/robots/booster_k1/actuators.py": {
+      "original_sha256": "060f17872ef202d33f76e072a68349aca1311ff73782b518d5e098c5b09322a7",
+      "original_bytes": 1399,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "060f17872ef202d33f76e072a68349aca1311ff73782b518d5e098c5b09322a7",
+      "current_bytes": 1399
+    },
+    "src/booster_mjlab/robots/booster_k1/k1_constants.py": {
+      "original_sha256": "85b36f8358e2fd4408570f11c7fda9ddc4eba3f0d84e4154b4ad0acaa9be5a5f",
+      "original_bytes": 10077,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "85b36f8358e2fd4408570f11c7fda9ddc4eba3f0d84e4154b4ad0acaa9be5a5f",
+      "current_bytes": 10077,
+      "keep_uncertain": "Co-located unused definitions retained intact: rough terrain factory, extra symmetry/pose/passive-export support. Removing fragments would require invasive surgery."
+    },
+    "src/booster_mjlab/robots/booster_k1/k1_parallel_constants.py": {
+      "original_sha256": "72b18784648ed4fabd5594935a1d3aea0fc003c327c4020fe6c1e47959ba1011",
+      "original_bytes": 8295,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/parallel_ankle_ik.py": {
+      "original_sha256": "fddb925976ae1c1ba828db201e5d82d8ea3a94dfc13ce076ce5b80c434709adb",
+      "original_bytes": 6387,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/parallel_retarget.py": {
+      "original_sha256": "e13c7c4ef28c5cf6aa61f47f8717b71a9ad24b1d6296e7fc4db996195c68bcd3",
+      "original_bytes": 4666,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/sensors.py": {
+      "original_sha256": "f289a44c70aae61a33a3e7d5d5d32830c1a8dd511be5f1d1672e446ef33a1f58",
+      "original_bytes": 15129,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "f289a44c70aae61a33a3e7d5d5d32830c1a8dd511be5f1d1672e446ef33a1f58",
+      "current_bytes": 15129
+    },
+    "src/booster_mjlab/robots/booster_k1/torque_speed.py": {
+      "original_sha256": "085ad9e4f79832cf174bf7b24fd4869a56900c451b7b96ecb26b658a1646887c",
+      "original_bytes": 4878,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/k1.xml": {
+      "original_sha256": "c4da49ae6a37f6071c0a01eea3e14530e839f02aaef8d7d968fc3147a78f9a10",
+      "original_bytes": 18061,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "c4da49ae6a37f6071c0a01eea3e14530e839f02aaef8d7d968fc3147a78f9a10",
+      "current_bytes": 18061
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/k1_parallel.xml": {
+      "original_sha256": "f42380505e9a49e5e0902f943c86c2cf50b861a88226c24cedeac7e0062fdefd",
+      "original_bytes": 24514,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Resource only referenced by removed parallel/sports environment; no retained XML or dynamic runtime references."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Head_1.STL": {
+      "original_sha256": "9ab00ca2c2ae9b27cdd54cdbbe7d9e50b1873f5815163aef5d719beceb445c96",
+      "original_bytes": 509184,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "9ab00ca2c2ae9b27cdd54cdbbe7d9e50b1873f5815163aef5d719beceb445c96",
+      "current_bytes": 509184
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Head_2.STL": {
+      "original_sha256": "ae8f81b864fd0f16efaab6b0ee697a0fd80e54c2bd38f48526a326bc03085020",
+      "original_bytes": 1502334,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "ae8f81b864fd0f16efaab6b0ee697a0fd80e54c2bd38f48526a326bc03085020",
+      "current_bytes": 1502334
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Head_2_Collision.STL": {
+      "original_sha256": "267b252c5ea867910ec536fdbe47def43133b743a53af1a813277fa064395d52",
+      "original_bytes": 4684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Head_2_ZED.STL": {
+      "original_sha256": "af0568dcba894d67b8fa3184569db0d64020e3bef7ab40b2684ffc6458e8c666",
+      "original_bytes": 4445234,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/K1_left_foot.STL": {
+      "original_sha256": "cd848125142f37ac2f1513b01286057d270839912cac1e5525c66de527895ba8",
+      "original_bytes": 428784,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/K1logo.STL": {
+      "original_sha256": "93aab425a2e953fdd1c704ce9d9a4fb8d8431da9cc0cc4d2648838b11c47b487",
+      "original_bytes": 150584,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "93aab425a2e953fdd1c704ce9d9a4fb8d8431da9cc0cc4d2648838b11c47b487",
+      "current_bytes": 150584
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/L1_XX_Ball.STL": {
+      "original_sha256": "1e668ea0d7e1b42f83c2de6f2a01682d18c420bef56a334d6842e17226964deb",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/L1_X_Ball.STL": {
+      "original_sha256": "48036910b576cc3536945fcad2963f0fb1e39c0a7749586ef2ed127217271eb1",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/L1_Y_Ball.STL": {
+      "original_sha256": "48036910b576cc3536945fcad2963f0fb1e39c0a7749586ef2ed127217271eb1",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/L2_XX_Ball.STL": {
+      "original_sha256": "9008bd32fb3d396f00c5f6ae34def57c04ad4f0a65365389ac5cb0c3131a1e5e",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/L2_X_Ball.STL": {
+      "original_sha256": "39c0db9c3689ac195efdc441ef1ec5ac7d481692e54d73f5f55ff0a623ee3685",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/L2_Y_Ball.STL": {
+      "original_sha256": "39c0db9c3689ac195efdc441ef1ec5ac7d481692e54d73f5f55ff0a623ee3685",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Ankle_Cross.STL": {
+      "original_sha256": "1798cb3b9721d82c913ce4b0080da9c0eaa69749445bc4a8d6f13dc6a69da232",
+      "original_bytes": 105984,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "1798cb3b9721d82c913ce4b0080da9c0eaa69749445bc4a8d6f13dc6a69da232",
+      "current_bytes": 105984
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Arm_1.STL": {
+      "original_sha256": "e1a6de4b34f17260daa09b81aa3bc115d450787b808190aca286073b45540775",
+      "original_bytes": 142584,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "e1a6de4b34f17260daa09b81aa3bc115d450787b808190aca286073b45540775",
+      "current_bytes": 142584
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Arm_2.STL": {
+      "original_sha256": "b5861bc9f6119baf50f131bbc4f6420867e63c7c1de31792d1e788cac70ad8ae",
+      "original_bytes": 1258184,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "b5861bc9f6119baf50f131bbc4f6420867e63c7c1de31792d1e788cac70ad8ae",
+      "current_bytes": 1258184
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Arm_3.STL": {
+      "original_sha256": "5424bdfedad4e70edc2dab6587bf0062c44489768c6e53ba4c2e58d700267f78",
+      "original_bytes": 147484,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "5424bdfedad4e70edc2dab6587bf0062c44489768c6e53ba4c2e58d700267f78",
+      "current_bytes": 147484
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Arm_4.STL": {
+      "original_sha256": "e7de1dc79b85b23792eaf8d49688891876f46b4eab7234f2513ae9e241a72b14",
+      "original_bytes": 117584,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "e7de1dc79b85b23792eaf8d49688891876f46b4eab7234f2513ae9e241a72b14",
+      "current_bytes": 117584
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Crank_Down.STL": {
+      "original_sha256": "6029af63bb74aef9cdc6591d42d03820ed66c4229a8d71205cf787a00d18d2af",
+      "original_bytes": 374384,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Crank_Up.STL": {
+      "original_sha256": "8be37024b0668c6c6968845dda90d3b0ae463f0a1d78940ab796782c8b492903",
+      "original_bytes": 374384,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Foot.STL": {
+      "original_sha256": "1a391f4b3b87a27726e09f15f6d2ce7795c702c13c0d76307d4756d8aeaadde3",
+      "original_bytes": 2244834,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "1a391f4b3b87a27726e09f15f6d2ce7795c702c13c0d76307d4756d8aeaadde3",
+      "current_bytes": 2244834
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Foot_Collision.STL": {
+      "original_sha256": "1b61d43d5ab1f4ddc2c70cc099a8f3e419c97139759b184e5eb49ba8c3d22375",
+      "original_bytes": 3084,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Foot_old.STL": {
+      "original_sha256": "8dd6582601ad0679683b2c3cb4253adf630893ac43f3a131c62dd75c3d9d9a74",
+      "original_bytes": 661684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Hip_Pitch.STL": {
+      "original_sha256": "ca604e643aaf41ec4d05c8a13ff66ce39587f9d80be7268376c2a6368decd55f",
+      "original_bytes": 132784,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "ca604e643aaf41ec4d05c8a13ff66ce39587f9d80be7268376c2a6368decd55f",
+      "current_bytes": 132784
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Hip_Roll.STL": {
+      "original_sha256": "aa278205ca751295c3d073ca3ddf682762a66218e6e5f239a22109b1d8f5ecf9",
+      "original_bytes": 37584,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "aa278205ca751295c3d073ca3ddf682762a66218e6e5f239a22109b1d8f5ecf9",
+      "current_bytes": 37584
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Hip_Yaw.STL": {
+      "original_sha256": "2d8ed37c3a7c954937d5e3b462869f93292e4c4b76047fd4667380fedd3d66d2",
+      "original_bytes": 211384,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "2d8ed37c3a7c954937d5e3b462869f93292e4c4b76047fd4667380fedd3d66d2",
+      "current_bytes": 211384
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Link_Long.STL": {
+      "original_sha256": "df3ee938304e26bd752bb31a571896e08445a8e2232c8977e20c56f55d75bb92",
+      "original_bytes": 181584,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Link_Short.STL": {
+      "original_sha256": "8b6dd6f8cc8a6c7cbb344390b5171ec21b878d4a929b0285864751898cff5e9d",
+      "original_bytes": 188584,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Left_Shank.STL": {
+      "original_sha256": "0e99f5850ba752492a7d5fa0fb066efae03823cb4020e7e57a38e652a34be85c",
+      "original_bytes": 314184,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "0e99f5850ba752492a7d5fa0fb066efae03823cb4020e7e57a38e652a34be85c",
+      "current_bytes": 314184
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/R1_XX_Ball.STL": {
+      "original_sha256": "ec00f40d361b80aec85a24d5899424266ffd116f62426f1dbfbc6b29999525dc",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/R1_X_Ball.STL": {
+      "original_sha256": "cc8889f243a7b3966b675961164cbbb50bb83d0ab832049f0d7d92335cbe43d2",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/R1_Y_Ball.STL": {
+      "original_sha256": "cc8889f243a7b3966b675961164cbbb50bb83d0ab832049f0d7d92335cbe43d2",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/R2_XX_Ball.STL": {
+      "original_sha256": "7baa5dc5f93dea8bfc8997ebf58abbf41907b6984b05db3ad9ebca3ea9fd58f6",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/R2_X_Ball.STL": {
+      "original_sha256": "f3254f620659e20503e6b386a23b577fa3882409aa7ba819a786a441dba1e2a4",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/R2_Y_Ball.STL": {
+      "original_sha256": "f3254f620659e20503e6b386a23b577fa3882409aa7ba819a786a441dba1e2a4",
+      "original_bytes": 117684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Ankle_Cross.STL": {
+      "original_sha256": "fd59798e9b4b55661372b601db3dbec9ef5567256b631c3d679a2e3446638256",
+      "original_bytes": 105984,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "fd59798e9b4b55661372b601db3dbec9ef5567256b631c3d679a2e3446638256",
+      "current_bytes": 105984
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Arm_1.STL": {
+      "original_sha256": "1dc1518437d0b2de09d7c559d13f620ee4910b985ca0b70cb387f29fad67a7d6",
+      "original_bytes": 142084,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "1dc1518437d0b2de09d7c559d13f620ee4910b985ca0b70cb387f29fad67a7d6",
+      "current_bytes": 142084
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Arm_2.STL": {
+      "original_sha256": "2f7f4bf14aac5fdb06974c2336be24b5f5577b069a6e0a36e98a443779bb15cc",
+      "original_bytes": 1222784,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "2f7f4bf14aac5fdb06974c2336be24b5f5577b069a6e0a36e98a443779bb15cc",
+      "current_bytes": 1222784
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Arm_3.STL": {
+      "original_sha256": "e3ae9cbd20736f4c3b29b2a455b07d8a59e6c093258d467fc20ecd4dc4b7486d",
+      "original_bytes": 216234,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "e3ae9cbd20736f4c3b29b2a455b07d8a59e6c093258d467fc20ecd4dc4b7486d",
+      "current_bytes": 216234
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Arm_4.STL": {
+      "original_sha256": "4a70e0006cc89bfeacb9b825821cdf715113b9cf7d267de6fe4b64ad3e5b9aad",
+      "original_bytes": 117884,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "4a70e0006cc89bfeacb9b825821cdf715113b9cf7d267de6fe4b64ad3e5b9aad",
+      "current_bytes": 117884
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Crank_Down.STL": {
+      "original_sha256": "f04e3b5badf9c5f84bfa386bae2852be80481ec56f8f97ce7bfb2f8d6d0c80aa",
+      "original_bytes": 374384,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Crank_Up.STL": {
+      "original_sha256": "1fab2a0a32fc4395aa254482b51e8c18e3223b0d0d051b3abcabf0da78794c5d",
+      "original_bytes": 155984,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Foot.STL": {
+      "original_sha256": "059b969922a9a31eb40828206070731d3612453f3aa3c2559702c566abb4b0fd",
+      "original_bytes": 2245984,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "059b969922a9a31eb40828206070731d3612453f3aa3c2559702c566abb4b0fd",
+      "current_bytes": 2245984
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Foot_Collision.STL": {
+      "original_sha256": "93a9eb7405fe31e418fca46dbe242fe3820a2d4ae66011aa45bfaeb3d3dc900f",
+      "original_bytes": 3084,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Foot_old.STL": {
+      "original_sha256": "09d148b13607357b9624087f97313ca7629113cc13ea8f31dd11f92aacabd5cb",
+      "original_bytes": 661684,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Hip_Pitch.STL": {
+      "original_sha256": "ab6052ca8f6a2ddf75ad536e3daf51024cbd8f6b9fa5ca36a8ac966347d850ac",
+      "original_bytes": 132784,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "ab6052ca8f6a2ddf75ad536e3daf51024cbd8f6b9fa5ca36a8ac966347d850ac",
+      "current_bytes": 132784
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Hip_Roll.STL": {
+      "original_sha256": "9655e49b0ae12366eb8dba28dcc9593d63d6ec7a8431d90dc692041c8bb74765",
+      "original_bytes": 37584,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "9655e49b0ae12366eb8dba28dcc9593d63d6ec7a8431d90dc692041c8bb74765",
+      "current_bytes": 37584
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Hip_Yaw.STL": {
+      "original_sha256": "dd54f3cd1cdbaead210692a4cd4e131a1b696ceefd9715ab1eb6a8e9f44d88aa",
+      "original_bytes": 211284,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "dd54f3cd1cdbaead210692a4cd4e131a1b696ceefd9715ab1eb6a8e9f44d88aa",
+      "current_bytes": 211284
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Link_Long.STL": {
+      "original_sha256": "fd8474e54cc1738247b3ac7841f171fe1befe21918e5aa7e458c6a6cf9a2f151",
+      "original_bytes": 181584,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Link_Short.STL": {
+      "original_sha256": "13fc390e6a225f057090b7185b9a1fc6cfb664bd159cadcdd8e041cb60e5650f",
+      "original_bytes": 188584,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Right_Shank.STL": {
+      "original_sha256": "6a7e831055148894ba623bf8d2eca27f2cef32e324819566c39e33cb12c0b4f9",
+      "original_bytes": 314284,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "6a7e831055148894ba623bf8d2eca27f2cef32e324819566c39e33cb12c0b4f9",
+      "current_bytes": 314284
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Trunk_1.STL": {
+      "original_sha256": "9a48b7fc366dac059c1a0a446abbf6fe205cacce034c4e72f9ba6e256e6ff648",
+      "original_bytes": 247484,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "9a48b7fc366dac059c1a0a446abbf6fe205cacce034c4e72f9ba6e256e6ff648",
+      "current_bytes": 247484
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Trunk_2.STL": {
+      "original_sha256": "2a6c08aa314083f834d0a15c0028124c9778e6593aca150f7e45e6469dd5cf39",
+      "original_bytes": 128384,
+      "classification": "REQUIRED_ASSET",
+      "retained": true,
+      "evidence": "Serial k1.xml or a mesh declared by it; compiled robot nu=22/nq=29/nv=28 and CPU steps.",
+      "current_sha256": "2a6c08aa314083f834d0a15c0028124c9778e6593aca150f7e45e6469dd5cf39",
+      "current_bytes": 128384
+    },
+    "src/booster_mjlab/robots/booster_k1/xmls/meshes/Trunk_Collision.STL": {
+      "original_sha256": "67f6c63d8e42cf610c94668531678f8413606b820667ac133aa12ac159ef2894",
+      "original_bytes": 3084,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Absent from k1.xml mesh declarations (25 retained); parallel models disconnected; assembled robot and all task CPU steps pass."
+    },
+    "src/booster_mjlab/scripts/csv_to_npz.py": {
+      "original_sha256": "770d094ddecbef495757d2d0b86525c1e4898f9856a25cbd9fc8a88e3f045d82",
+      "original_bytes": 14333,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/scripts/export_web_demo.py": {
+      "original_sha256": "cc92b094f526a2f0c426a6e632ca9536d5048dd9783d41e9d50543dd03636dcc",
+      "original_bytes": 20649,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/scripts/motions_to_hf.py": {
+      "original_sha256": "5793097ded0b670b9da227a536870b27048759e13c5124556b75f597f9a2d87e",
+      "original_bytes": 9240,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/scripts/play.py": {
+      "original_sha256": "fc8e6e98727778f82027d2df91c45f645e6add6bb5d2ed2bef63603eb0c7c6bc",
+      "original_bytes": 1809,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "fc8e6e98727778f82027d2df91c45f645e6add6bb5d2ed2bef63603eb0c7c6bc",
+      "current_bytes": 1809
+    },
+    "src/booster_mjlab/scripts/train.py": {
+      "original_sha256": "d2fd92b476a0c7d0fd0eea5d9211f85e6097242ae13506c7e76716c1e67f77c7",
+      "original_bytes": 2679,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "06ee7bce83528d5ffa059a33d1588d1526e5c438ac1b54b021a3167d00737502",
+      "current_bytes": 2598,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/scripts/upload_motion.py": {
+      "original_sha256": "6d789662efbd27e377bdae1e995e2dc6b7ae0f56dffe4609c5863782774dc5a1",
+      "original_bytes": 10034,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/scripts/utils.py": {
+      "original_sha256": "81978822ade8ba4c2f6e95888f613f70a7ae2a6fa739ce879b0889b9bcb76f72",
+      "original_bytes": 1562,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "81978822ade8ba4c2f6e95888f613f70a7ae2a6fa739ce879b0889b9bcb76f72",
+      "current_bytes": 1562
+    },
+    "src/booster_mjlab/scripts/visualize_motions.py": {
+      "original_sha256": "975ed32aed532f10452c6d76ff0106f48da729758ec5419f1f9c28c63f2110c7",
+      "original_bytes": 81992,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/__init__.py": {
+      "original_sha256": "6102c3e628d940141655ca9b96d5186334c548dbcd5741e4f93c5ac7a60cd0c6",
+      "original_bytes": 129,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "35b5236ea265607b3c2548a6dfdc2df7be9e29e98a0d3fbb7af3b98905f57def",
+      "current_bytes": 556,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/tasks/tracking/__init__.py": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/tracking/config/__init__.py": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/tracking/config/k1/__init__.py": {
+      "original_sha256": "c810149fb7dce92a4accc8524db61e7dc74a0140b6bed8008a10f59bd1a7c818",
+      "original_bytes": 503,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/tracking/config/k1/env_cfgs.py": {
+      "original_sha256": "5c4b9daf9dc9e3a8ef11faaacb5f3373a554eb57c19e2bd5b1b04b4e02ce9665",
+      "original_bytes": 6502,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/tracking/config/k1/rl_cfg.py": {
+      "original_sha256": "c73bb4913bc1c04d3df5687adee70e09020dfa90dea52c8473b7797a613cef17",
+      "original_bytes": 1381,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/tracking/tracking_env_cfg.py": {
+      "original_sha256": "8d602bd328c9ad2b6ee76b33c2249aeef0821c78ff7ee6f9b3983f7694dfa15a",
+      "original_bytes": 2860,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/velocity/__init__.py": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_bytes": 0
+    },
+    "src/booster_mjlab/tasks/velocity/config/__init__.py": {
+      "original_sha256": "62fe01e5ddf0809403d72527d11456a7d90d416fab17dd0354510a00e16882b4",
+      "original_bytes": 102,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "1cd55ff732828f41c7a8f5e174faf7348dc07ded9317ffc047e1f579b0e9c091",
+      "current_bytes": 68,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/tasks/velocity/config/_amp_wrapper.py": {
+      "original_sha256": "8266fdba1b3d6a4432fbf9b1688d7340b595ecdcaaef056169d6886b3ceb5a80",
+      "original_bytes": 3419,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/velocity/config/k1/__init__.py": {
+      "original_sha256": "808163e042f3c618c9aa0472e164d0793513c313fb74174f0b48c817aa44f5c2",
+      "original_bytes": 2439,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "1cd55ff732828f41c7a8f5e174faf7348dc07ded9317ffc047e1f579b0e9c091",
+      "current_bytes": 68,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/tasks/velocity/config/k1/env_cfgs.py": {
+      "original_sha256": "84338adf8a690a128a56b13c8f239f11f444651304a34d7b8d522aa49707a4cf",
+      "original_bytes": 6110,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "84338adf8a690a128a56b13c8f239f11f444651304a34d7b8d522aa49707a4cf",
+      "current_bytes": 6110
+    },
+    "src/booster_mjlab/tasks/velocity/config/k1/rl_cfg.py": {
+      "original_sha256": "b1afb5fad440c291770307159ea841b3d93e9055008ed2c932d1baa69ed4029a",
+      "original_bytes": 5069,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "29b35528fe4714d46570538bb628b468c79e986e1463101dc5f5c5bedfc8e822",
+      "current_bytes": 1943,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "src/booster_mjlab/tasks/velocity/config/k1_parallel/__init__.py": {
+      "original_sha256": "435ea6c627678d7e48df6d0702afe49b610d1809efe00916cf90699cd0c0c376",
+      "original_bytes": 2929,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/velocity/config/k1_parallel/env_cfgs.py": {
+      "original_sha256": "18324770d032423d31c41092e153840ef64e63c9b968d9ac248b3ad47d9b596d",
+      "original_bytes": 3926,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/velocity/config/k1_parallel/rl_cfg.py": {
+      "original_sha256": "fe951b306adf5f8023cd0805fbbd04ceeb81bca37c6d65789111b811bc4f86e8",
+      "original_bytes": 2917,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/velocity/mdp/__init__.py": {
+      "original_sha256": "d951b889e10225c3673afe755ac8dc422ab6c3f3f075c7be364a50e39b55152c",
+      "original_bytes": 206,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "d951b889e10225c3673afe755ac8dc422ab6c3f3f075c7be364a50e39b55152c",
+      "current_bytes": 206
+    },
+    "src/booster_mjlab/tasks/velocity/mdp/observations.py": {
+      "original_sha256": "82adeb1f5fd1019ac1c1c5229d7f656ff05f09d1a858afdaab97ecc833cdedc9",
+      "original_bytes": 10667,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "82adeb1f5fd1019ac1c1c5229d7f656ff05f09d1a858afdaab97ecc833cdedc9",
+      "current_bytes": 10667,
+      "keep_uncertain": "Co-located unused definitions retained intact: rough terrain factory, extra symmetry/pose/passive-export support. Removing fragments would require invasive surgery."
+    },
+    "src/booster_mjlab/tasks/velocity/mdp/rewards.py": {
+      "original_sha256": "beed618f58fee50da1bbe7c7aee7ea30cc890b9138260b7a94fe0fc21c58be05",
+      "original_bytes": 6880,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "beed618f58fee50da1bbe7c7aee7ea30cc890b9138260b7a94fe0fc21c58be05",
+      "current_bytes": 6880
+    },
+    "src/booster_mjlab/tasks/velocity/mdp/velocity_command.py": {
+      "original_sha256": "291e8df41f453c6d5c4ba82c908034b2700e18f7c452ec2278023747553ced56",
+      "original_bytes": 842,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "291e8df41f453c6d5c4ba82c908034b2700e18f7c452ec2278023747553ced56",
+      "current_bytes": 842
+    },
+    "src/booster_mjlab/tasks/velocity/rl/__init__.py": {
+      "original_sha256": "30c6975395465afd36292f4ab589774754a5f537d77ba569f063a2836ffac56f",
+      "original_bytes": 94,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/velocity/rl/runner.py": {
+      "original_sha256": "b0b15f99373b8da954a68b87e7b9710ec83b9728d6896c75fc0baa61db320bbc",
+      "original_bytes": 1096,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Explicit Flat registration disconnects unrelated families; absent from runtime import traces; no retained local import/entry point references; config, CPU and CLI checks pass."
+    },
+    "src/booster_mjlab/tasks/velocity/velocity_env_cfg.py": {
+      "original_sha256": "3eeef69099ddb5d9649814fa38ac0a800fddff43189c3840ee941fdf4c182abf",
+      "original_bytes": 19663,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "3eeef69099ddb5d9649814fa38ac0a800fddff43189c3840ee941fdf4c182abf",
+      "current_bytes": 19663,
+      "keep_uncertain": "Co-located unused definitions retained intact: rough terrain factory, extra symmetry/pose/passive-export support. Removing fragments would require invasive surgery."
+    },
+    "src/booster_mjlab/terrains/__init__.py": {
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_bytes": 0,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "current_bytes": 0
+    },
+    "src/booster_mjlab/terrains/contact.py": {
+      "original_sha256": "5363107861be470ddfe53d0dc427f186fca9ec9414296da2c1991c9f7fd9a8ac",
+      "original_bytes": 499,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "5363107861be470ddfe53d0dc427f186fca9ec9414296da2c1991c9f7fd9a8ac",
+      "current_bytes": 499
+    },
+    "src/booster_mjlab/viewer/__init__.py": {
+      "original_sha256": "f92a0492fbf5262fd394633deb2163647a6f2e7fa26750997bb65f3995af1ff5",
+      "original_bytes": 189,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "f92a0492fbf5262fd394633deb2163647a6f2e7fa26750997bb65f3995af1ff5",
+      "current_bytes": 189
+    },
+    "src/booster_mjlab/viewer/viser_recorder.py": {
+      "original_sha256": "7002935c021d61048567dffc99496279b952406ef164040bdae6a6bd5628317e",
+      "original_bytes": 29316,
+      "classification": "REQUIRED_RUNTIME",
+      "retained": true,
+      "evidence": "Retained Flat train/play import chain, delayed PPO/export/playback import, or package boundary supporting it.",
+      "current_sha256": "7002935c021d61048567dffc99496279b952406ef164040bdae6a6bd5628317e",
+      "current_bytes": 29316
+    },
+    "uv.lock": {
+      "original_sha256": "cb89c24c60823d77164ab3f5da29d4762cbad0b13a8623f943c5e0822aac6929",
+      "original_bytes": 416709,
+      "classification": "REQUIRED_INSTALL_BUILD",
+      "retained": true,
+      "evidence": "Pinned uv project/build/lock/Python or source-ignore metadata.",
+      "current_sha256": "31a69c61637667e6b8a3a1617d39445fb8a319a615e5549a44267c78225b47ef",
+      "current_bytes": 388774,
+      "patch": "See staff/vendor-patches.diff; only registration/import boundaries, plain-PPO surface or install metadata."
+    },
+    "website/index.html": {
+      "original_sha256": "f495c68fb08abe9c3c6087e620d3d2026329ed844d1373478f00d434d8a038a3",
+      "original_bytes": 15652,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/css/BULMA-LICENSE.txt": {
+      "original_sha256": "10ecf152e6235bd8d3fdeb88918272b9b6bab957750069db9af3012cc3383f7e",
+      "original_bytes": 1080,
+      "classification": "REQUIRED_PROVENANCE",
+      "retained": true,
+      "evidence": "Original attribution or third-party license, preserved verbatim; not a Booster software license.",
+      "current_sha256": "10ecf152e6235bd8d3fdeb88918272b9b6bab957750069db9af3012cc3383f7e",
+      "current_bytes": 1080
+    },
+    "website/static/css/bulma.min.css": {
+      "original_sha256": "ad3a5d3b41d7042369ade00772eead0763e9839d79568fb91ad612b2734bcfef",
+      "original_bytes": 207302,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/css/project.css": {
+      "original_sha256": "4cf409675c7fe8f7c013cd05c249a9fc6d7a6526979e420637197dce5cfa02c4",
+      "original_bytes": 7588,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/css/template.css": {
+      "original_sha256": "c7908e6dab87ff5efcde33f24c65b3dc9f774847e70a0e382581dba34f57fa62",
+      "original_bytes": 5216,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/k1_web.xml": {
+      "original_sha256": "7745556e9d4d799ed89d47216b2eebad952991a019418f06fe1402a21d9adb89",
+      "original_bytes": 18801,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/meshes/Head_1.stl": {
+      "original_sha256": "8fd20c23b3ba0a45eb78abb020d847542be9a791d5a535d68ec7731fd5f536c2",
+      "original_bytes": 50984,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/meshes/Head_2.stl": {
+      "original_sha256": "bb2b7bab41bd915cd600c6f672e5f1aaec225b14a0d8b04b3c02a8bb097a27a4",
+      "original_bytes": 150234,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/meshes/Left_Arm_3.stl": {
+      "original_sha256": "80db2e5a4b0cc7360300e38071fa56855069cb37738df02493b843ab360d22bf",
+      "original_bytes": 50084,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/meshes/Left_Foot.stl": {
+      "original_sha256": "88f89f14a4ec4fe2a6ce0970dc7b9e7b2ef9058889df406ed4ec48415ca83e78",
+      "original_bytes": 224534,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/meshes/Right_Arm_3.stl": {
+      "original_sha256": "c95b607a6c9758f3f0a2f5d3084645875b0df730f85ad2a78fdf4f168483c22c",
+      "original_bytes": 50034,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/meshes/Right_Foot.stl": {
+      "original_sha256": "cfa083309d8b0d3a17750b1ee600b877fb1e441da319b39c64191ec487df98b2",
+      "original_bytes": 224584,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/policy.bin": {
+      "original_sha256": "58f92646258a3c2bc527448d0f0c3ef7c0f6dcb6ee5017f9fe94c8d858fccbd4",
+      "original_bytes": 824496,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/robot.glb": {
+      "original_sha256": "a88bf13d3ddac041a66304e521f3f7e11e257a3e28e0874331b9e910cd9259ee",
+      "original_bytes": 473240,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/demo/scene.json": {
+      "original_sha256": "e1de096494c20dd91da09069b7eff99e2b24890eb50639da9aeba917b6e8696d",
+      "original_bytes": 7233,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/diagonal_turn.jpg": {
+      "original_sha256": "5a32be88b0c9b425654951a092a1ee0ad0940d78351abd5d5ebf39a70fbf930c",
+      "original_bytes": 141998,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/favicon.svg": {
+      "original_sha256": "df8d898497e8d97d064025823d31edf80c598b37ac41c941d4a528846db104ed",
+      "original_bytes": 1857,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/forward_backward.jpg": {
+      "original_sha256": "eadf59bc85b810a3142a77b6b75fad049dae788e5d43aa0a16498108a5e423c0",
+      "original_bytes": 137377,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/hf-logo.svg": {
+      "original_sha256": "942cad1ccda905ac5a659dfd2d78b344fccfb84a8a3ac3721e08f488205638a0",
+      "original_bytes": 35286,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/irl_logo.svg": {
+      "original_sha256": "3bcdbe795365ae6692e481a4d2eac2dcc0820a4748147e98e3d6bf2ffff31294",
+      "original_bytes": 7719,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/loop.jpg": {
+      "original_sha256": "f221a31f5842c070db038a3726af2356c9e18b09f0c42c928e2261c5ad9fbddb",
+      "original_bytes": 135755,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/sim/gulp.jpg": {
+      "original_sha256": "8b83190f6afb27655ea84d6502ce95f7a88e111f5883b6bd3adfa0667cceb580",
+      "original_bytes": 61408,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/sim/kick.jpg": {
+      "original_sha256": "8947d5b67d8d159d6521a043857ea9c0f2539946df85db893ab1f4a13a087c24",
+      "original_bytes": 53207,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/sim/out_and_back.jpg": {
+      "original_sha256": "e362accb78472c211b8bc8a7b1b3b3e6c55c6a6a9c02db67b28aaa3b799f8612",
+      "original_bytes": 58635,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/sim/sprint_follow.jpg": {
+      "original_sha256": "d1d15ba9ae903425fac80367e6330fd9072351050a834653124e37dd97e8af04",
+      "original_bytes": 65448,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/sim/strafe_across.jpg": {
+      "original_sha256": "e720d835c69354eb02d43c6a0581af2d63e094cad131a1d91d474a3339bb984a",
+      "original_bytes": 57788,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/sim/thomas_flare.jpg": {
+      "original_sha256": "ee77e6f8a0c7a51bb398002d6710158eb52beaaec6c7c9ecdd29aea94d99451d",
+      "original_bytes": 62018,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/sim/walk_across.jpg": {
+      "original_sha256": "62a1818ac893e6f44cadbfcf19a2f69feb4468f6f9a0c767a10ce07cbb36831b",
+      "original_bytes": 56528,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/social-preview.jpg": {
+      "original_sha256": "8e2d1be939a009c77279312cb26ae5bb39125b4d186fe4ae9c1933586e81aab5",
+      "original_bytes": 222899,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/strafe.jpg": {
+      "original_sha256": "6e694e34358773edb48b5cffe31f49ed8b79a7a6ae52e28aef90376c2343dd30",
+      "original_bytes": 137507,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/text_logo.svg": {
+      "original_sha256": "2693d912c04b37a919ae9ebf64407dcbf404bf89bfefa0466787e3a8b685c7e3",
+      "original_bytes": 4328,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/images/uva_logo.svg": {
+      "original_sha256": "af4e431bc627975796411c494e9ea0a7b1552e8d9ad72f5b71ca3065b4482fd8",
+      "original_bytes": 26926,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/js/carousel.js": {
+      "original_sha256": "873b5e2012e85cb7b9617c9f2c59f27b40de2b4b970c437a04e02c208af9b874",
+      "original_bytes": 3515,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    },
+    "website/static/js/demo.js": {
+      "original_sha256": "043c58d0dbfb8165f5d9c03b6c2a36f183d2cbf60571586b82ac5bbb7fed55ab",
+      "original_bytes": 26285,
+      "classification": "SAFE_TO_REMOVE",
+      "retained": false,
+      "evidence": "Static/runtime/build searches: website/demo/documentation not referenced by retained package, XML, train or play. Bulma license separately retained."
+    }
+  }
+}
