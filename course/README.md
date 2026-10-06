@@ -113,6 +113,7 @@ src/course_tasks/          the Python package with all course environments
   hw2/                     double pendulum envs, REINFORCE + your PPO
 hw0/README.md              assignment 0 handout
 hw2/README.md              assignment 2 handout
+hw3/README.md              assignment 3 handout (Booster K1 reward design)
 hw2/reinforce_walkthrough.ipynb   REINFORCE walkthrough notebook (HW2 Part I)
 hw2/plot_comparison.py     plots your runs against environment steps
 logs/                      all training output lands here (git-ignored)

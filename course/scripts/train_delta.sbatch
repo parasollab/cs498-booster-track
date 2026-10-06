@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Course sbatch template. THIS IS THE ONLY SANCTIONED WAY TO TRAIN.
 #
-#   sbatch scripts/train.sbatch <Task-Id> [extra args passed to `uv run train`]
-#   e.g. sbatch scripts/train.sbatch Course-Cartpole-Swingup --env.scene.num-envs 4096
+#   sbatch scripts/train_delta.sbatch <Task-Id> [extra args passed to `uv run train`]
+#   e.g. sbatch scripts/train_delta.sbatch Course-Cartpole-Swingup --env.scene.num-envs 4096
 #
 # Submit from the REPO ROOT. Everything this job produces stays inside the
 # repo, under logs/:
@@ -35,14 +35,11 @@
 set -euo pipefail
 cd "${SLURM_SUBMIT_DIR}"
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SCRIPT_NAME="$(basename "${BASH_SOURCE[0]}")"
-
-TASK_ID="${1:?Usage: sbatch scripts/train.sbatch <Task-Id> [train args...]}"
+TASK_ID="${1:?Usage: sbatch scripts/train_delta.sbatch <Task-Id> [train args...]}"
 shift
 
-if [[ ! -f "${SCRIPT_DIR}/${SCRIPT_NAME}" ]]; then
-  echo "ERROR: submit from the repo root (found no ${SCRIPT_DIR}/${SCRIPT_NAME} in ${SLURM_SUBMIT_DIR})" >&2
+if [[ ! -f pyproject.toml || ! -d scripts || ! -d src/course_tasks ]]; then
+  echo "ERROR: submit from the repo root (expected pyproject.toml, scripts/, src/course_tasks/ in ${SLURM_SUBMIT_DIR})" >&2
   exit 1
 fi
 
@@ -68,6 +65,16 @@ echo "== task: ${TASK_ID}  extra args: $*"
 echo "== log root: ${LOG_ROOT_ARGS[*]:-(caller-supplied)}"
 nvidia-smi || true
 
-uv run train "${TASK_ID}" "${LOG_ROOT_ARGS[@]}" "$@"
+# Empty-array expansion below also works with Bash 3.2 and set -u.
+# Booster uses its own pinned mjlab and console wrappers. Keep older labs' env.
+case "${TASK_ID}" in
+  Mjlab-Velocity-Flat-Booster-K1|Course-Booster-K1-Rewards|Course-Booster-K1-Rewards-Candidate)
+    uv run --project hw3/vendor/booster_mjlab --locked --no-dev \
+      python hw3/run.py train "${TASK_ID}" ${LOG_ROOT_ARGS[@]+"${LOG_ROOT_ARGS[@]}"} "$@"
+    ;;
+  *)
+    uv run train "${TASK_ID}" ${LOG_ROOT_ARGS[@]+"${LOG_ROOT_ARGS[@]}"} "$@"
+    ;;
+esac
 
 echo "== $(date) done =="
