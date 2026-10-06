@@ -13,11 +13,11 @@ getting a policy that walks in simulation and packaging it for deployment.
 
 | Checkpoint | Due | What you submit |
 |---|---|---|
-| **Checkpoint 1** | **Sunday 10/12** | A video of your policy walking in the viewer, the files needed for deployment (see Step 5), and which team member's policy your team will deploy for Checkpoint 2 |
-| Checkpoint 2 | announced separately | Deployment on the real robot, by signup slot |
+| **Checkpoint 1** | **Monday 10/12** | A video of your policy walking in the viewer, the files needed for deployment (see Step 5), and which team member's policy your team will deploy for Checkpoint 2 |
+| **Checkpoint 2** | **Monday 10/19** | Deployment on the real robot, by signup slot |
 
 A deployment guide and signup sheet will be posted in this repository and on
-Canvas later this week. **[TA: add link/date once posted.]**
+Canvas later this week. **[TA: add link once posted.]**
 
 ## Read this first: cluster time is the bottleneck
 
