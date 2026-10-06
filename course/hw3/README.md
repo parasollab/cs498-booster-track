@@ -3,7 +3,7 @@
 **What you'll learn.** Turn physical control objectives into batched reward
 functions, check them before spending GPU hours, and see how a reward change
 alters learned behavior. PPO and the simulator are provided. Your work is seven
-reward implementations, a trained walking policy, and one justified reward variant.
+reward implementations, followed by one justified design variant.
 
 **This homework feeds the robot deployment.** The policy you train here is
 the one your team will put on the real Booster K1. Checkpoint 1 is about
@@ -13,11 +13,10 @@ getting a policy that walks in simulation and packaging it for deployment.
 
 | Checkpoint | Due | What you submit |
 |---|---|---|
-| **Checkpoint 1** | **Monday 10/12** | A video of your policy walking in the viewer, the files needed for deployment (see Step 5), and which team member's policy your team will deploy for Checkpoint 2 |
-| **Checkpoint 2** | **Monday 10/19** | Deployment on the real robot, by signup slot |
+| **Checkpoint 1** (individual) | **Monday 10/12** | Each student: a video of your policy working and the files needed for deployment (see Step 5). Each team: which member's policy will be deployed for Checkpoint 2 |
+| **Checkpoint 2** (team) | **Monday 10/19** | Deploy the chosen policy on the real robot, by signup slot |
 
-A deployment guide and signup sheet will be posted in this repository and on
-Canvas later this week. **[TA: add link once posted.]**
+The deployment guide and signup sheet will be sent separately later this week.
 
 ## Read this first: cluster time is the bottleneck
 
@@ -29,7 +28,7 @@ Canvas later this week. **[TA: add link once posted.]**
 - **Log in to W&B before every GPU submission.** Run `uv run wandb login` on
   the login node (see the [workflow guide](../docs/01_workflow.md)). The CPU
   smoke test in Step 3 deliberately sets `WANDB_MODE=offline`; do **not** carry
-  that into your sbatch command.
+  that into your sbatch command. Reset to `WANDB_MODE=online` before running sbatch.
 - Use `scripts/my_jobs.sh`, `scripts/my_usage.sh` and `scripts/kill_my_jobs.sh`
   to monitor jobs. Do not alter the fixed cluster resource requests.
 
@@ -42,7 +41,7 @@ Canvas later this week. **[TA: add link once posted.]**
 | 3 | Run the CPU smoke test | laptop or login node (CPU) |
 | 4 | Train on the cluster | course sbatch |
 | 5 | Play back, record, export, and package for deployment | login node + viewer |
-| 6 | One reward variant and a short write-up | cluster + write-up |
+| 6 | Train and compare a designed variant | course sbatch |
 
 As in HW2, debug the math before interpreting a reward curve.
 
@@ -110,8 +109,8 @@ rewards, events, terminations and curricula.
 
 ## Step 2 — Implement seven rewards
 
-Edit only [course_booster/rewards.py](course_booster/rewards.py) and, when you
-get to the variant, `STUDENT_WEIGHTS` / `STUDENT_PARAMS` in
+Edit only [course_booster/rewards.py](course_booster/rewards.py) and, if you
+tune weights or parameters, `STUDENT_WEIGHTS` / `STUDENT_PARAMS` in
 [course_booster/env_cfg.py](course_booster/env_cfg.py). Keep function names
 and signatures. Do not edit vendor code, observations, sensors, PPO or launchers.
 
@@ -151,7 +150,7 @@ formulas pass them. Build your own small tests with
 [tests/reward_fixtures.py](tests/reward_fixtures.py): set a perfect-tracking
 state and a bad one, a turning command versus a standing one, an upside-down
 gravity vector, one foot moving while the other is planted. Write down why you
-expect each number. You will include a few of these in your write-up.
+expect each number.
 
 `run.py check` confirms the tasks register and that nothing outside the
 reward layer drifted from the baseline. It does not judge your rewards.
@@ -189,6 +188,7 @@ template for the cluster you are on:
 
 ```bash
 uv run wandb login     # once per login session; paste your key from https://wandb.ai/authorize
+WANDB_MODE=online
 
 # DeltaAI
 sbatch scripts/train_deltaai.sbatch Course-Booster-K1-Rewards \
@@ -203,11 +203,9 @@ one GPU, 16 CPUs and **four hours**. The sbatch script routes Booster tasks
 through the isolated project automatically. Single-GPU only.
 
 **How long to train.** Default PPO is 30,000 iterations with 24 steps per
-environment per iteration. That will not finish inside four hours. For scale,
-1,000 iterations at 4,096 environments took about 32 minutes on a desktop
-RTX 5090, so expect roughly **5,000 to 7,000 iterations per four-hour job**
-depending on the cluster GPU. Checkpoints and ONNX exports are saved every
-50 iterations, so you keep the latest one if the job hits its time limit.
+environment per iteration. That will not finish inside four hours.
+Checkpoints and ONNX exports are saved every 50 iterations, so you keep the
+latest one if the job hits its time limit.
 If the policy is not walking well yet, resume from the last checkpoint
 (Step 5) in a second job. Budget for **at least two four-hour jobs plus
 queue time** before Checkpoint 1.
@@ -274,45 +272,34 @@ goes to `logs/videos/viser` or wherever `--record-dir` points. Playback turns
 off observation noise and the illegal-contact termination, keeps pushes, and
 widens the command range, so it looks a bit more forgiving than training.
 
-**Checkpoint 1 deliverables** (one submission per team on Canvas):
+**Checkpoint 1** is individual. Each student submits:
 
-1. A short video of your policy walking forward, turning, and standing still
-   from the viewer recording. **[TA: confirm length and required commands.]**
-2. The run folder for the policy you are submitting: the final `model_*.pt`,
-   the `.onnx` export, `params/`, and the Slurm log.
-3. Your `rewards.py` and `env_cfg.py` as trained.
-4. The name of the team member whose policy will be deployed in Checkpoint 2.
+1. A video of your policy working. This is required before you can deploy.
+2. Any files required for deployment.
 
-The deployment guide will state the exact files the robot needs.
-**[TA: link once posted.]**
+Each team also indicates which member's policy will be deployed for
+Checkpoint 2. Checkpoint 2 is done as a team.
 
-## Step 6 — One reward variant and the write-up
+The deployment guide, sent separately, will state the exact files the robot needs.
 
-Pick **one** change and justify it before you train it: a weight, a parameter
-such as the air-time window or a tolerance, or a formula change in one of your
-seven functions. Write a one-sentence hypothesis about how the gait will
-change. Train it with the **same** environment count, iterations and PPO
-settings as your reference run, then compare in matched conditions.
+## Step 6 — One justified design variant
 
-Compare behavior, not just total reward. After a reward change the summed
-reward means something different. Look at the per-term episode rewards,
-tracking error, falls, standing stillness, foot slip, landing impacts and
-upper-body posture, and watch both policies side by side in the viewer.
+Due with Checkpoint 2 (Monday 10/19).
 
-The runner logs per-iteration scalars but not HW2's `Train/total_env_steps`.
-For an unresumed run, iteration `k` corresponds to `(k + 1) * num_envs * 24`
-transitions; add segments together for resumed runs. The HW2 plot script does
-not work unchanged.
+Proposed comparisons follow HW2's equal-data principle: course reference,
+staff-approved candidate, and your one justified reward variant. Keep environment
+count, rollout length, PPO settings and evaluation commands fixed. Compare
+tracking, falls, standing, slip, impacts and upper-body behavior, not summed
+reward alone: reward totals have different meanings after a design change.
 
-**Write-up** (two pages, PDF on Canvas, due with Checkpoint 1
-**[TA: confirm due date]**):
+The pinned Booster runner logs `Train/mean_reward`, `Policy/mean_std` and episode
+terms but **does not log HW2's `Train/total_env_steps`**. Do not use the HW2 plot
+script unchanged. For an unresumed run, event iteration k represents
+`(k + 1) * num_envs * 24` collected transitions. For resumed runs, concatenate
+segments and add previously collected transitions; repeated iteration labels
+are not additional progress. No episode-reward scalar may appear before an
+episode finishes.
 
-1. For three of your seven rewards, one hand-built test state, the value you
-   expected, and why.
-2. A reward or training problem you hit and how you found it.
-3. Your variant: the hypothesis, the comparison plot or table, and what
-   actually happened.
-4. Task IDs, run folders, checkpoint names and seeds for every run you cite.
-
-Optional for the curious: train `Course-Booster-K1-Rewards-Candidate` with the
-same settings and report whether dropping the two shaping terms changes the gait.
+Explain your hypothesis, tensor checks, measured behavior and a failure you
+debugged. Preserve source, task IDs, seeds, arguments, run folders, checkpoint
+names and plots/recordings.
