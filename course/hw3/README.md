@@ -13,7 +13,7 @@ getting a policy that walks in simulation and packaging it for deployment.
 
 | Checkpoint | Due | What you submit |
 |---|---|---|
-| **Checkpoint 1** (individual) | **Monday 10/12** | Each student: a video of your policy working and your `logs/rsl_rl/k1_velocity/<your_run>/<your_run>.onnx` renamed to `<yourname>.onnx`  (see Step 5). Each team: which member's policy will be deployed for Checkpoint 2 |
+| **Checkpoint 1** (individual) | **Monday 10/12** | Each student: a video of your policy working and your `logs/rsl_rl/course_k1_rewards/<your_run>/<your_run>.onnx` renamed to `<yourname>.onnx`  (see Step 5). Each team: which member's policy will be deployed for Checkpoint 2 |
 | **Checkpoint 2** (team) | **Monday 10/19** | Deploy the chosen policy on the real robot, by signup slot |
 
 See this link for the [deployment guide](../docs/05_deployment.md). Also make sure to sign up for a slot on the [deployment signup sheet](https://docs.google.com/spreadsheets/d/1YWaNUEeh-L0wAra9yZsPKczqOvcRZ5tJuGCkHK-7a2I/edit?usp=sharing)
@@ -275,7 +275,7 @@ widens the command range, so it looks a bit more forgiving than training.
 **Checkpoint 1** is individual. Each student submits:
 
 1. A video of your policy working. This is required before you can deploy.
-2. `logs/rsl_rl/k1_velocity/<your_run>/<your_run>.onnx` renamed to `<yourname>.onnx`
+2. `logs/rsl_rl/course_k1_rewards/<your_run>/<your_run>.onnx` renamed to `<yourname>.onnx`
 
 Each team also indicates which member's policy will be deployed for
 Checkpoint 2. Checkpoint 2 is done as a team.
