@@ -7,7 +7,7 @@ The repo and its environment are already set up on the robot and the lab machine
 After training the K1 flat velocity task in booster_mjlab, submit this file:
 
 ```
-logs/rsl_rl/k1_velocity/<your_run>/<your_run>.onnx
+logs/rsl_rl/course_k1_rewards/<your_run>/<your_run>.onnx
 ```
 
 - It is the **latest iteration** of that run: booster_mjlab overwrites it each time it saves a checkpoint.
