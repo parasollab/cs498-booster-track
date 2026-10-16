@@ -286,20 +286,5 @@ See the [deployment guide](../docs/05_deployment.md) for more details.
 
 Due with Checkpoint 2 (Monday 10/19).
 
-Proposed comparisons follow HW2's equal-data principle: course reference,
-staff-approved candidate, and your one justified reward variant. Keep environment
-count, rollout length, PPO settings and evaluation commands fixed. Compare
-tracking, falls, standing, slip, impacts and upper-body behavior, not summed
-reward alone: reward totals have different meanings after a design change.
-
-The pinned Booster runner logs `Train/mean_reward`, `Policy/mean_std` and episode
-terms but **does not log HW2's `Train/total_env_steps`**. Do not use the HW2 plot
-script unchanged. For an unresumed run, event iteration k represents
-`(k + 1) * num_envs * 24` collected transitions. For resumed runs, concatenate
-segments and add previously collected transitions; repeated iteration labels
-are not additional progress. No episode-reward scalar may appear before an
-episode finishes.
-
-Explain your hypothesis, tensor checks, measured behavior and a failure you
-debugged. Preserve source, task IDs, seeds, arguments, run folders, checkpoint
-names and plots/recordings.
+Please submit a 2 paragraph writeup. First paragraph should discuss you saw in deployment. Second paragraph should discuss what you would change about the reward to fix any errors you saw with your walking policy in deployment.
+This is a team submission. Only one person per team needs to submit.
